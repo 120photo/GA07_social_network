@@ -7,5 +7,5 @@ class Post
 	belongs_to :user
 	belongs_to :wall
 
-	field :post, type: String
+	field :posting, type: String
 end
