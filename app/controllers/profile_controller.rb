@@ -15,7 +15,10 @@ class ProfileController < ApplicationController
 	end
 
 	def profiles
-		# @member = Profiles.find(params[:id])
+		@member = User.find(params[:id])
+		@email = @member.email
+		@member_profile = Profile.all
+		@member_profile = @member_profile.where(user_id: params[:id])
 	end
 
 	def all

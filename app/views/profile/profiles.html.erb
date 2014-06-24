@@ -1,2 +1,14 @@
-<h1>hey there</h1>
-<p>profile for : <%=  %> </p>
+<h1>hey there profiles</h1>
+
+
+
+
+<% @member_profile.each do |i| %>
+	<p><%= i.user_name %></p>
+<% end %>
+
+	<p><%= @email %></p>
+
+<% @member_profile.each do |i| %>
+	<p><%= i.bio %></p>
+<% end %>
