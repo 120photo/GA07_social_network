@@ -1,8 +1,10 @@
 class ProfileController < ApplicationController
-	def index
+	def new
 	end
 
 	def show
+		@current_profile = Profile.find(params[:id])
+		#gets profile
 	end
 
 	def create
