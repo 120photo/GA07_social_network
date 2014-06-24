@@ -11,7 +11,7 @@
 	<ul>
 		<li><a href="/">Home</a></li>
 		<% if @current_user %>
-			<li>Welcome, <%= @current_user.user_name%></li>
+			<li>Welcome, <%= @current_user.email%></li>
 			<li><a href="/logout">Logout</a></li>
 			<h4><a href ="/profile/<%=@current_user.id%>">My profile</a></h4>
 		<% else %>
