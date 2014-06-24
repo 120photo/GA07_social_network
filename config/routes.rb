@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   #for profile
   get '/profile/:id' => 'profile#show'
-  get '/create_profile' => 'profile#index'
+  get '/create_profile' => 'profile#new'
   post '/create_profile' => 'profile#create'
 
 
