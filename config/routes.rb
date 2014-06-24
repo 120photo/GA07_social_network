@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   #for profile
-  get '/profile/:id' => 'profile#index'
+  get '/profile/:id' => 'profile#show'
   get '/create_profile' => 'profile#index'
   post '/create_profile' => 'profile#create'
 
