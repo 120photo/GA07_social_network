@@ -12,3 +12,8 @@
 <% @member_profile.each do |i| %>
 	<p><%= i.bio %></p>
 <% end %>
+
+<% @member_profile.each do |i| %>
+	<p><img src="<%= i.image %>" width="300px" ></p>
+<% end %>
+
