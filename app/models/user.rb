@@ -2,6 +2,8 @@ class User
 	include Mongoid::Document # creates mongoDB connection with this model / class
 	include ActiveModel::SecurePassword # needed for password authentication
 
+	has_one :profile
+
 	# field :user_name, type: String # this should be a users real name, not a uniq login name
 	field :email, type: String # email will be used for loggin in
 	# field :bio, type: String # short profile description

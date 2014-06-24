@@ -4,7 +4,7 @@ class ProfileController < ApplicationController
 
 	def show
 		@current_user_profile = User.find(params[:id])
-		# @current_profile = Profile.find([:user_id][:@current_user_profile])
+	    @current_profile = Profile.where(user_id: params[:id])
 		# @profile = Profile.all # pulls all user profiles
 
 		#gets profile
