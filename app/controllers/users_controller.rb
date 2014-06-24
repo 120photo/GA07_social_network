@@ -16,6 +16,6 @@ class UsersController < ApplicationController
 		# converts newly created document
 		# bson id to string and saves in session
 		# so session is associated to user
-		redirect_to '/'
+		redirect_to '/create_profile'
 	end
 end
