@@ -38,4 +38,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+
 gem 'mongoid', "~> 4.0.0.rc1", github: 'mongoid/mongoid'

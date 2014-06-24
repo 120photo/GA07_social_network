@@ -1,4 +1,4 @@
-class Post
+class Posting
 	include Mongoid::Document
 
 	# post belong both to a user who posted them
