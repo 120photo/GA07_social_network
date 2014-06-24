@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   #for profile
   get '/profile/:id' => 'profile#index'
+  get '/create_profile' => 'profile#create'
 
 
 end
