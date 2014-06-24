@@ -13,6 +13,7 @@ class ProfileController < ApplicationController
 		profile.user_name = params[:profile][:user_name]
 		profile.bio = params[:profile][:bio]
 		profile.image = params[:profile][:image]
+		profile.user =  @current_user
 		profile.save!
 		redirect_to '/'
 	end
