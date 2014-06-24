@@ -14,6 +14,10 @@ class ProfileController < ApplicationController
 		#gets profile
 	end
 
+	def profiles
+		# @member = Profiles.find(params[:id])
+	end
+
 	def all
 		@all = Profile.all
 	end
