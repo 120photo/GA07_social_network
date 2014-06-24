@@ -1,5 +1,5 @@
 <% @all.each do |users| %>
 	<ul>
-		<li><a href="profiles/<%= users.user_id %>"><%= users.user_name %></a></li>
+		<li><a href="profiles/<%= users.user_id %>"><%= users.user_name %></a><br><img src="<%= users.image %>" width="50px" ></li>
 	</ul>
 <% end %>
