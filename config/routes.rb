@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get '/create_profile' => 'profile#new'
   post '/create_profile' => 'profile#create'
 
+
+
 end

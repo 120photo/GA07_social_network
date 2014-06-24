@@ -14,7 +14,9 @@
 			<li>Welcome, <%= @current_user.email%></li>
 			<li><a href="/logout">Logout</a></li>
 			<li><a href="/profiles">All Users</a></li>
-			<h4><a href ="/profile/<%=@current_user.id%>">My profile</a></h4>
+			<li><a href ="/profile/<%=@current_user.id%>">My profile</a></li>
+				
+
 		<% else %>
 			<li><a href="/login">Login</a></li>
 			<li><a href="/new_user">Create Account</a></li>

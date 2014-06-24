@@ -1,8 +1,10 @@
-<h1>THIS IS MY PROFILE</h1>
-<p>this is the show view</p>
-<p><%= @current_user_profile.email %></p>
+<h1>Welcome to <%=@current_profile.user_name%>'s profile</h1>
+<h4><%= @email %></h4>
 <p><%= @current_profile.bio %></p>
+<div><img src ="<%=@current_profile.image%>"></div>
 
-<p> <%= @email %> </p>
+<div>
+	<h2>This is my wall</h2>
+</div>
 
-<p> <%= @user_id %> </p>
+
