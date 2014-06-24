@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   #for profile
   get '/profile/:id' => 'profile#show'
   get '/profiles/' => 'profile#all'
+  get '/profiles/:id' => 'profile#profiles'
   get '/create_profile' => 'profile#new'
   post '/create_profile' => 'profile#create'
 
