@@ -3,8 +3,15 @@ class ProfileController < ApplicationController
 	end
 
 	def show
-		@current_profile = Profile.find(params[:id])
+		@current_user_profile = User.find(params[:id])
+		# @current_profile = Profile.find([:user_id][:@current_user_profile])
+		# @profile = Profile.all # pulls all user profiles
+
 		#gets profile
+	end
+
+	def all
+		@all = Profile.all
 	end
 
 	def create
