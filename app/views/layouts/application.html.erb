@@ -21,10 +21,12 @@
 		
 	
 <header class="header">
-	<ul>
+	<% if @current_user %>
+		<p>Welcome, <%= @current_user.email%></p>
+	<% end %>
+	<ul class="nav nav-justified">
 		<li><a href="/">Home</a></li>
 		<% if @current_user %>
-			<li>Welcome, <%= @current_user.email%></li>
 			<li><a href="/logout">Logout</a></li>
 			<li><a href="/profiles">All Users</a></li>
 			<li><a href ="/profile/<%=@current_user.id%>">My profile</a></li>

@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 	end
 
 	def create
+		# method interacts with session > new.html.erb view
 		user = User.where(email: params[:user_email]).first
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id.to_s
