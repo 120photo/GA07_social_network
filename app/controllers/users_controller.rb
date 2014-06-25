@@ -23,7 +23,8 @@ class UsersController < ApplicationController
 		# unless @current_user.friends.include? params[:id] 
 		@current_user.push(friends: params[:id])
 		# push to friends array id number of friend
-		redirect_to '/profile/@current_user.id'
+
+		redirect_to "/profile/#{@current_user.id}"
 		# show the new friend
 	end
 end
