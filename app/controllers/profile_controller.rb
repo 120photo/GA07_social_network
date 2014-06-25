@@ -6,9 +6,9 @@ class ProfileController < ApplicationController
 
 		@current_profile = Profile.where(user_id: params[:id]).first
 
-			@current_user_profile = User.find(params[:id])
-			@email = @current_user_profile.email
-			@user_id = @current_user_profile.id
+		@current_user_profile = User.find(params[:id])
+		@email = @current_user_profile.email
+		@user_id = @current_user_profile.id
 	    
 	    # @current_profile = Profile.find(user_id: params[:@user_id])
 	    # @user = @current_profile.user_name
