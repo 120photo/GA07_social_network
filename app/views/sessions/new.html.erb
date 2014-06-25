@@ -1,6 +1,6 @@
 <h1>Login</h1>
 <!-- need to include _tag when using forms w/o model -->
-<%= form_tag '/login' do %>
+<%= form_tag '/login' do |f| %>
 	<%= label_tag :user_email%>
 	<%= text_field_tag :user_email%>
 	<br>
