@@ -5,7 +5,7 @@ class ProfileController < ApplicationController
 	def show
 
 		@current_profile = Profile.where(user_id: params[:id]).first
-		if @current_profile 
+
 			@current_user_profile = User.find(params[:id])
 			@email = @current_user_profile.email
 			@user_id = @current_user_profile.id
@@ -15,9 +15,6 @@ class ProfileController < ApplicationController
 		# @profile = Profile.all # pulls all user profiles
 
 		#gets profile
-		else
-			redirect_to '/create_profile'
-		end
 	end
 
 	def profiles

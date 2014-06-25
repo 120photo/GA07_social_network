@@ -9,7 +9,11 @@ class User
 	# field :bio, type: String # short profile description
 	field :password_digest, type: String # password
 
+	field :friends, type: Array
+	
 	validates :email, presence: true, uniqueness: true
+
+
 
 	has_secure_password
 end

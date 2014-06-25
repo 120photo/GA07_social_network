@@ -18,4 +18,11 @@ class UsersController < ApplicationController
 		# so session is associated to user
 		redirect_to '/create_profile'
 	end
+
+	def add_friend
+		@current_user.push(friends: params[:id])
+		# push to friends array id number of friend
+		redirect_to '/profile/@current_user.id'
+		# show the new friend
+	end
 end
