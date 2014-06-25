@@ -16,4 +16,9 @@ class User
 
 
 	has_secure_password
+
+	# one way to check to prevent duplicate and self friends
+	# def my_page?
+	# 	@current_user id == 
+	# end
 end
