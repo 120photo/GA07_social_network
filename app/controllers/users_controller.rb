@@ -19,7 +19,8 @@ class UsersController < ApplicationController
 		redirect_to '/create_profile'
 	end
 
-	def add_friend 
+	def add_friend
+		# unless @current_user.friends.include? params[:id] 
 		@current_user.push(friends: params[:id])
 		# push to friends array id number of friend
 		redirect_to '/profile/@current_user.id'
