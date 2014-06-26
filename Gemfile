@@ -42,3 +42,8 @@ gem "pry"
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 gem 'mongoid', "~> 4.0.0.rc1", github: 'mongoid/mongoid'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
