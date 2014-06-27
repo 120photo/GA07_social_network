@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id.to_s
 			redirect_to '/'
 		else
-			redirect_to 'login'
+			redirect_to :back
 		end
 	end
 
