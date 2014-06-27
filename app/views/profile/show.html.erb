@@ -9,8 +9,21 @@
 <br>
 <%=@current_user_profile.friends.to_a%>
 
-<div>
-	<h2>This is my wall</h2>
+<h2>This is my wall:</h2>
+<div id="to_post">
+	<h4>This is where people post on my wall</h4>
+	<%= form_for Posting.new, url: "/posting/#{@current_profile.id}" do |f| %>
+		<%= f.text_area :status_update %>
+		<br>
+		<%= f.submit :Post%>
+	<% end %>
+</div>
+<div id="posted">
+	<h4>This is the posted stuff on my wall</h4>
+	<% @all_wall_posts.to_a.each do |post| %>
+		<p><%=post.status_update%></p>
+		<h6>-<%=post.user_name%></h6>
+	<%end%>
 </div>
 
 
