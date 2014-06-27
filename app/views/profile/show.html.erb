@@ -8,7 +8,7 @@
 <br>
 <h4>These are all my friends:</h4>
 <br>
-	<%= @friends %>
+	<%= @friends.to_a.uniq %>
 
 <h2>This is my wall:</h2>
 <div id="to_post">
