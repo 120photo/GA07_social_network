@@ -3,6 +3,7 @@ class Profile
 	include Mongoid::Paperclip
 
 	belongs_to :user
+	has_many :postings
 
 	has_mongoid_attached_file :image
 	validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]

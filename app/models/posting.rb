@@ -1,11 +1,13 @@
 class Posting
 	include Mongoid::Document
 
-	# post belong both to a user who posted them
-	# and to a users wall
+	# save posts
 
+
+	belongs_to :profile
 	belongs_to :user
-	belongs_to :wall
 
-	field :posting, type: String
+
+	field :status_update, type: String
+	field :user_name, type: String
 end

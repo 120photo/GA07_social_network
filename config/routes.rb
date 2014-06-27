@@ -16,11 +16,13 @@ Rails.application.routes.draw do
   get '/profiles' => 'profile#all'
   get 'profile/:id/edit' => 'profile#edit_profile'
 
-  # not sure what this is used for
-  # get '/profiles/:id' => 'profile#profiles'
-
   get '/create_profile' => 'profile#new'
   post '/create_profile' => 'profile#create'
+
+  # comment on wall (profile) 
+  get '/posting/:id' => 'posting#new'
+  post '/posting/:id' => 'posting#create'
+  
 
 
 

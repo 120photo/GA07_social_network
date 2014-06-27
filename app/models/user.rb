@@ -3,6 +3,7 @@ class User
 	include ActiveModel::SecurePassword # needed for password authentication
 
 	has_one :profile
+	has_many :postings
 
 	# field :user_name, type: String # this should be a users real name, not a uniq login name
 	field :email, type: String # email will be used for loggin in
