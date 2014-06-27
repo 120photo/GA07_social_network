@@ -1,1 +1,13 @@
-<h1>edit profile</h1>
+<h1>Edit Your Profile</h1>
+
+<%= form_for Profile.new, url: '/edit_profile' do |f| %>
+	<%= f.label :alias %>
+	<%= f.text_field :user_name, :value => @alias %>
+	<br>
+	<%= f.label :bio %>
+	<%= f.text_area :bio, :value => @bio %>
+	<br>
+	<%= f.file_field :image %>
+	<br>
+	<%= f.submit "Update" %>
+<% end %>

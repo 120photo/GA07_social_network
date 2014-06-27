@@ -11,7 +11,8 @@ class ProfileController < ApplicationController
 		@user_id = @current_user_profile.id
 
 		@all_wall_posts = Posting.where(profile_id: @current_profile.id)
-	
+
+		@friends = @current_user_profile.friends
 
 	    # @current_profile = Profile.find(user_id: params[:@user_id])
 	    # @user = @current_profile.user_name
@@ -44,5 +45,7 @@ class ProfileController < ApplicationController
 
 	def edit_profile
 		profile = Profile.find_by(user_id: params[:id])
+		@alias = profile.user_name
+		@bio = profile.bio
 	end
 end
