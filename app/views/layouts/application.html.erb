@@ -30,6 +30,7 @@
 			<li><a href="/logout">Logout</a></li>
 			<li><a href="/profiles">All Users</a></li>
 			<li><a href ="/profile/<%=@current_user.id%>">My profile</a></li>
+			<li><a href="/profile/<%= @current_user.id %>/edit">Edit My Profile</a></li>
 				
 
 		<% else %>
