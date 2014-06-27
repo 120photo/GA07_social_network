@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   #for profile
   get '/profile/:id' => 'profile#show'
   get '/profiles' => 'profile#all'
+  get 'profile/:id/edit' => 'profile#edit_profile'
 
   # not sure what this is used for
   # get '/profiles/:id' => 'profile#profiles'

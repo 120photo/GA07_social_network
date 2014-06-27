@@ -38,4 +38,8 @@ class ProfileController < ApplicationController
 		profile.save!
 		redirect_to '/'
 	end
+
+	def edit_profile
+		profile = Profile.find_by(user_id: params[:id])
+	end
 end
