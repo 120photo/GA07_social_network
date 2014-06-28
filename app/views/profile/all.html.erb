@@ -1,5 +1,9 @@
-<% @all.each do |users| %>
-	<ul>
-		<li><a href="profile/<%= users.user_id %>"><%= users.user_name %></a><br><img src="<%= users.image %>" width="50px" ></li>
-	</ul>
-<% end %>
+<!-- shows all friends -->
+<br>
+<div class="centered">
+	<% @all.each do |users| %>
+		<ul class="nobullets">
+			<li><a href="profile/<%= users.user_id %>"><%= users.user_name %></a><br><img src="<%= users.image %>" width="50px" ></li>
+		</ul>
+	<% end %>
+</div>

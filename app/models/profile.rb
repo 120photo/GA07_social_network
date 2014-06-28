@@ -5,6 +5,7 @@ class Profile
 	belongs_to :user
 	has_many :postings
 
+	# for image upload
 	has_mongoid_attached_file :image
 	validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
 

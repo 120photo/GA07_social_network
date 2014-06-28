@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+ #random
+ {	
+ 	background-color: white;
+ 	width: 100px;
+ 	height: 5px;
+ 	display: inline-block;
+ } 
+ .nav
+ {
+ 	box-shadow: 0 0 1px 1px;
+ }
+ .jumbotron
+ {
+ 	box-shadow: 0 2px 1px 1px;
+ }
+ .nobullets
+ {
+ 	list-style-type: none;
+ 	display:inline-block;
+
+ }
+ #no_radius
+ {
+	border-radius: 0;
+ }
+ #logo
+ {
+ 	letter-spacing: -10px;
+ 	font-size: 70px;
+ 	text-align: center;
+ 	background-color: white;
+ 	width:200px;
+ 	margin: 0 auto;
+ 	box-shadow: 0px 0px 5px;
+ 	border-radius: 5px;
+ }
+ span
+ {
+ 	letter-spacing: 0px;
+ 	font-weight: 100;
+ }
+ .centered
+ {
+ 	text-align: center;
+ }
+ #friends
+ {
+ 	position: absolute;
+ 	top:80px;
+ 	right:350px;
+ }

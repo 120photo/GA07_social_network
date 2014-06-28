@@ -1,7 +1,9 @@
 class PostingController < ApplicationController
+	# utilized
 	def new
 	end
 
+	# save new post 
 	def create
 		posting = Posting.new
 

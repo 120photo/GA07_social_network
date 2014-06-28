@@ -1,5 +1,5 @@
 <h1>Edit Your Profile</h1>
-
+<!-- edit profile form -->
 <%= form_for Profile.new, url: "/profile/#{@current_user.id}/save" do |f| %>
 	<%= f.label :alias %>
 	<%= f.text_field :user_name, :value => @alias %>

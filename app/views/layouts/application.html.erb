@@ -17,28 +17,24 @@
 
 </head>
 <body>
-<div class="container">
-		
-	
-<header class="header">
-
-	<ul class="nav nav-justified">
-		<li><a href="/">Home</a></li>
-		<% if @current_user %>
-			<li><a href="/logout">Logout</a></li>
-			<li><a href="/profiles">All Users</a></li>
-			<li><a href ="/profile/<%=@current_user.id%>">My profile</a></li>
-			<li><a href="/profile/<%= @current_user.id %>/edit">Edit My Profile</a></li>
-				
-
-		<% else %>
-			<li><a href="/login">Login</a></li>
-			<li><a href="/new_user">Create Account</a></li>
-		<% end %>
-	</ul>
-</header><!-- /header -->
-<%= yield %>
-
+<div class="container">	
+	<header class="header">
+		<ul class="nav nav-justified">
+			<li><a href="/">Home</a></li>
+			<!-- checks if user logged in -->
+			<% if @current_user %>
+				<li><a href="/logout">Logout</a></li>
+				<li><a href="/profiles">All Users</a></li>
+				<li><a href ="/profile/<%=@current_user.id%>">My profile</a></li>
+				<li><a href="/profile/<%= @current_user.id %>/edit">Edit My Profile</a></li>
+			<!-- if not logged in do this -->
+			<% else %>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/new_user">Create Account</a></li>
+			<% end %>
+		</ul>
+	</header><!-- /header -->
+	<%= yield %>
 </div>
 </body>
 </html>

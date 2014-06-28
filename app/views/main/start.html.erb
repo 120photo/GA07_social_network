@@ -1,7 +1,15 @@
-<div class="jumbotron">
+<div class="jumbotron" id="no_radius">
 	<h1>Welcome to the social network</h1>
 		<% if @current_user %>
-		<p>Welcome, <%= @current_user.email%></p>
-	<% end %>
+		<!-- checks if there is a current user -->
+		<!-- in other words if logged in -->
+			<p>Welcome, <%= @current_user.email%></p>
+		<% end %>
 </div>
 
+<br>
+
+<!-- logo -->
+<div id="logo">		
+	<a href="/"><p><span>the</span>SN</p></a>
+</div>

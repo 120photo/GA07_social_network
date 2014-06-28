@@ -1,30 +1,47 @@
+<div class="container">
+<br>
+<!-- welcome message -->
 <h1>Welcome to <%=@current_profile.user_name%>'s profile</h1>
+<!-- friend me link -->
 <a href="/add/<%=@current_profile.user_id%>">Friend Me</a>
+<!-- email and bio -->
 <h4><%= @email %></h4>
 <p><%= @current_profile.bio %></p>
 
-<div><img src ="<%=@current_profile.image%>" width="600px"></div>
+<!-- profile pic -->
+<div><img id="profilepic" src ="<%=@current_profile.image%>" width="600px"></div>
 
 <br>
-<h4>These are all my friends:</h4>
-<br>
-	<%= @friends.to_a.uniq %>
 
-<h2>This is my wall:</h2>
-<div id="to_post">
-	<h4>This is where people post on my wall</h4>
-	<%= form_for Posting.new, url: "/posting/#{@current_profile.id}" do |f| %>
-		<%= f.text_area :status_update %>
-		<br>
-		<%= f.submit :Post%>
-	<% end %>
+<!-- friends -->
+<div id="friends">
+	<h4>My Friends:</h4>
+	<br>
+	<p><%@friends.each do |x|%><%=x%><br><%end%></p>
 </div>
-<div id="posted">
-	<h4>This is the posted stuff on my wall</h4>
-	<% @all_wall_posts.to_a.each do |post| %>
-		<p><%=post.status_update%></p>
-		<h6>-<%=post.user_name%></h6>
-	<%end%>
+
+<br><br><br>
+
+<!-- wall -->
+<div id="wall">
+	<h2>My Wall:</h2>
+	<div id="to_post">
+		<%= form_for Posting.new, url: "/posting/#{@current_profile.id}" do |f| %>
+			<%= f.text_area :status_update %>
+			<br>
+			<%= f.submit :Post%>
+		<% end %>
+	</div>
+	<div id="posted">
+		<br>
+		<h4>Posted:</h4>
+		<% @all_wall_posts.to_a.each do |post| %>
+			<p><%=post.status_update%></p>
+			<h6>-<%=post.user_name%></h6>
+			<br>
+		<%end%>
+	</div>
+</div>
 </div>
 
 

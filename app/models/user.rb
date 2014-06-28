@@ -18,6 +18,7 @@ class User
 
 	has_secure_password
 
+	# side note idea for use of methods in models
 	# one way to check to prevent duplicate and self friends
 	# def my_page?
 	# 	@current_user id == 

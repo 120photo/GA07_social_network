@@ -1,9 +1,6 @@
 class Posting
 	include Mongoid::Document
 
-	# save posts
-
-
 	belongs_to :profile
 	belongs_to :user
 

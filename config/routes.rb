@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  # start page
   get '/' => 'main#start'
+
+  # make new user and save
   get '/new_user' => 'users#new'
   post '/new_user' => 'users#create'
 
@@ -25,8 +28,4 @@ Rails.application.routes.draw do
   get '/posting/:id' => 'posting#new'
   post '/posting/:id' => 'posting#create'
   
-
-
-
-
 end

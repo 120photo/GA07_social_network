@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
+	
+	# directs to new user form
 	def new
 	end
 
+	# saves new user
 	def create
 		user = User.new # create a new instance of User class
 		# code below grabs params from the browser and uses info to create data in User record
@@ -19,6 +22,7 @@ class UsersController < ApplicationController
 		redirect_to '/create_profile'
 	end
 
+	# adds news friend to arry in user
 	def add_friend
 		# unless @current_user.friends.include? params[:id] 
 		@current_user.push(friends: params[:id])
