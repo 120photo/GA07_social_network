@@ -1,6 +1,6 @@
 <h1>Edit Your Profile</h1>
 
-<%= form_for Profile.new, url: '/edit_profile' do |f| %>
+<%= form_for Profile.new, url: "/profile/#{@current_user.id}/save" do |f| %>
 	<%= f.label :alias %>
 	<%= f.text_field :user_name, :value => @alias %>
 	<br>

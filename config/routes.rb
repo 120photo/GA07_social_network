@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/profile/:id' => 'profile#show'
   get '/profiles' => 'profile#all'
   get '/profile/:id/edit' => 'profile#edit_profile'
+  get '/profile/:id/save' => 'profile#save_changes'
+  post '/profile/:id/save' => 'profile#save_changes'
 
   get '/create_profile' => 'profile#new'
   post '/create_profile' => 'profile#create'

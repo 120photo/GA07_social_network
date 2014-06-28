@@ -48,4 +48,14 @@ class ProfileController < ApplicationController
 		@alias = profile.user_name
 		@bio = profile.bio
 	end
+
+	def save_changes
+		profile = Profile.find_by(user_id: params[:id])
+		profile.bio = params[:profile][:bio]
+		profile.user_name = params[:profile][:user_name]
+		profile.image = params[:profile][:image]
+		profile.save!
+		redirect_to "/profile/#{@current_user.id}"
+
+	end
 end
