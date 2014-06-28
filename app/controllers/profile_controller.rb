@@ -24,7 +24,7 @@ class ProfileController < ApplicationController
 	def profiles
 		@member = User.find(params[:id])
 		@email = @member.email
-		@member_profile = Profile.all
+		@mewmber_profile = Profile.all
 		@member_profile = @member_profile.where(user_id: params[:id])
 	end
 
@@ -47,13 +47,19 @@ class ProfileController < ApplicationController
 		profile = Profile.find_by(user_id: params[:id])
 		@alias = profile.user_name
 		@bio = profile.bio
+		@image = profile.image
 	end
 
 	def save_changes
 		profile = Profile.find_by(user_id: params[:id])
 		profile.bio = params[:profile][:bio]
 		profile.user_name = params[:profile][:user_name]
-		profile.image = params[:profile][:image]
+		# profile.image = params[:profile][:image]
+		if params[:profile][:image] == nil
+			profile.image = profile.image
+		else
+			profile.image = params[:profile][:image]
+		end
 		profile.save!
 		redirect_to "/profile/#{@current_user.id}"
 
