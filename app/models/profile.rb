@@ -7,7 +7,7 @@ class Profile
 
 	# for image upload
 	has_mongoid_attached_file :image
-	validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/]
+	validates_attachment_file_name :image, :matches => [/png\Z/, /PNG\Z/, /jpe?g\Z/, /JPE?G\Z/]
 
 
 	field :user_name, type: String # this should be a users real name, not a uniq login name
