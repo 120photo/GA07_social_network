@@ -1,5 +1,5 @@
 class PostingController < ApplicationController
-	# utilized
+	# unutilized
 	def new
 	end
 
